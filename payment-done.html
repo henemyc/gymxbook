@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymXBook - Payment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 32px;
+            text-align: center;
+            max-width: 360px;
+            width: 100%;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .08)
+        }
+
+        .icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px
+        }
+
+        .icon.success {
+            background: #E8F5E9
+        }
+
+        .icon.success svg {
+            width: 36px;
+            height: 36px
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px
+        }
+
+        h1.success {
+            color: #1B5E20
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 8px
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 16px
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            padding: 10px 24px;
+            background: #1B5E20;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        .close-btn:active {
+            opacity: .8
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="icon success">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <h1 class="success">Payment Processing!</h1>
+        <p>Your payment is being verified.</p>
+        <p>Please return to the <strong>GymXBook</strong> app to check the final status.</p>
+        <button class="close-btn" onclick="window.close()">Close</button>
+        <p class="hint">You can safely close this tab</p>
+    </div>
+    <script>
+        // Auto-attempt to close after 3 seconds
+        setTimeout(function () { try { window.close(); } catch (e) { } }, 3000);
+    </script>
+</body>
+
+</html>
